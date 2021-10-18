@@ -1,0 +1,15 @@
+type Token @entity {
+  id: ID!
+  daoID: String!
+  name: String!
+  symbol: String!
+  owner: ID!
+
+  # creation
+  createdAtTimestamp: BigInt!
+  # block pool was created at
+  createdAtBlockNumber: BigInt!
+
+  # derived price in USD
+  # derivedUSD: BigDecimal!
+}
