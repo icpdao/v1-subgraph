@@ -1,9 +1,26 @@
+type TokenMintArgs @entity {
+  id: ID!
+  
+  p: BigInt!
+  aNumerator: BigInt!
+  aDenominator: BigInt!
+  bNumerator: BigInt!
+  bDenominator: BigInt!
+  c: BigInt!
+  d: BigInt!
+}
+
 type Token @entity {
   id: ID!
   daoID: String!
   name: String!
   symbol: String!
   owner: ID!
+
+  lpRatio: BigInt!
+  lpTotalAmount: BigInt!
+
+  mintArgs: TokenMintArgs!
 
   # creation
   createdAtTimestamp: BigInt!

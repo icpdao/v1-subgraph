@@ -6,7 +6,7 @@ dataSources:
     name: Factory
     network: ropsten
     source:
-      address: "0x7bC79e8E47D28332D41Af4e956137F3D11bdF8c9"
+      address: "0x031c10878D1BA2F04e520Ab3A3E9c82c001c2f29"
       abi: Factory
     mapping:
       kind: ethereum/events
@@ -14,10 +14,11 @@ dataSources:
       language: wasm/assemblyscript
       entities:
         - Token
+        - TokenMintArgs
       abis:
         - name: Factory
           file: ./abis/Factory.json
       eventHandlers:
-        - event: Deploy(indexed string,address[],uint256[],uint256,address,(uint128,uint16,uint16,uint16,uint16,uint16,uint16),string,string,address)
+        - event: Deploy(indexed string,address[],uint256[],uint256,uint256,address,(uint128,uint16,uint16,uint16,uint16,uint16,uint16),string,string,address)
           handler: handleDeploy
       file: ./src/mappings/factory.ts
