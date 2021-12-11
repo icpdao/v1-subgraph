@@ -4,7 +4,7 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: Factory
-    network: mainnet
+    network: ropsten
     source:
       address: "0xd4C76f2C30c31470518D175A47Ca2Faec98a2274"
       abi: Factory
