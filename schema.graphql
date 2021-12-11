@@ -2,12 +2,12 @@ type TokenMintArgs @entity {
   id: ID!
   
   p: BigInt!
-  aNumerator: BigInt!
-  aDenominator: BigInt!
-  bNumerator: BigInt!
-  bDenominator: BigInt!
-  c: BigInt!
-  d: BigInt!
+  aNumerator: Int!
+  aDenominator: Int!
+  bNumerator: Int!
+  bDenominator: Int!
+  c: Int!
+  d: Int!
 }
 
 type Token @entity {
